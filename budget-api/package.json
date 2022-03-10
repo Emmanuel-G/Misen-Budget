@@ -1,0 +1,22 @@
+{
+  "name": "budget-api",
+  "version": "1.0.0",
+  "description": "Backend API for Misen Budget App",
+  "main": "index.js",
+  "scripts": {
+    "api-server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "budget",
+    "api"
+  ],
+  "author": "Emmanuel Gumede",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
