@@ -13,31 +13,66 @@ body {
 
 header {
   width: 100%;
+  height: 4.5rem;
   display: grid;
-  grid-template-columns: 3fr 4fr 1fr 1fr;
+  grid-template-columns: 3fr 4fr 2fr 1fr;
+  align-content: center;
+  background-color: #004953;
+  border-radius: 0.25rem;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+.app-brand {
+  margin-left: 0.5rem;
+}
+
+.app-brand h2 {
+  color: #ffffff;
 }
 
 .container {
   width: 1280px;
+  height: 100vh;
   margin: 4px auto;
+  background-color: #dcfbff;
+  overflow: hidden;
 }
 
-.log-in-btn {
-  width: 6rem;
-  height: 2.5rem;
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.sign-in-btn {
+  width: 5.5rem;
+  height: 2.25rem;
   text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 0.75rem;
   padding: 0.5rem;
 }
 
-.sign-up-btn {
+.sign-up-link {
   width: 6rem;
-  height: 2.5rem;
+  height: 1rem;
+  font-size: 0.75rem;
   text-align: center;
-  background-color: #ffffff;
-  border: 1px solid black;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
+  color: #ffffff;
+  padding: auto;
+}
+
+.home-page {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25%;
 }

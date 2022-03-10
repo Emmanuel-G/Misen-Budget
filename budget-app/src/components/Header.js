@@ -1,12 +1,21 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
-      <div>
+      <div className="app-brand">
         <h2>Misen Personal Budget</h2>
       </div>
       <div></div>
-      <div className="log-in-btn">LOG IN</div>
-      <div className="sign-up-btn">SIGN UP</div>
+      <div></div>
+      <div className="login">
+        <Link to="Signin">
+          <div className="sign-in-btn">SIGN IN</div>
+        </Link>
+        <Link to="register">
+          <div className="sign-up-link">Or Register *</div>
+        </Link>
+      </div>
     </header>
   );
 };
