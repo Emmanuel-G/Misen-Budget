@@ -124,6 +124,10 @@ footer {
   background-position: center;
 }
 
+.home-left img {
+  margin-right: 5rem;
+}
+
 .home-center {
   grid-area: center;
   width: 100%;
@@ -144,6 +148,10 @@ footer {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.home-right img {
+  margin-left: 5rem;
 }
 
 .footer-top {
@@ -242,7 +250,22 @@ footer {
 }
 
 .page-title {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
   height: 3rem;
   background-color: #004953;
   color: #dcfbff;
+}
+
+.page-title-close {
+  color: #ffffff;
+}
+
+.page-title a {
+  justify-self: right;
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+  margin: 0.25rem 1rem;
+  padding: 0.25rem;
 }
