@@ -4,7 +4,9 @@ const Header = () => {
   return (
     <header>
       <div className="app-brand">
-        <h2>Misen Personal Budget</h2>
+        <Link to="/">
+          <h2>MISEN Personal Budget</h2>
+        </Link>
       </div>
       <div></div>
       <div></div>

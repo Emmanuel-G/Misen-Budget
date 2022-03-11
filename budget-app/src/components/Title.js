@@ -1,7 +1,7 @@
-const Title = () => {
+const Title = ({ name }) => {
   return (
-    <div>
-      <h2> Sign In </h2>
+    <div className="page-title">
+      <h2> {name} </h2>
     </div>
   );
 };
