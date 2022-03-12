@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import budImage1 from "../budget1.jpg";
-import budImage2 from "../budget2.jpg";
-import handshake from "../handshake1.jpg";
+import budImage1 from "../images/budget1.jpg";
+import budImage2 from "../images/budget2.jpg";
+import handshake from "../images/handshake1.jpg";
 
 const Home = () => {
   return (
