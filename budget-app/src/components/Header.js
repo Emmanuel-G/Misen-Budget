@@ -9,7 +9,7 @@ const Header = () => {
         </Link>
       </div>
       <div></div>
-      <div></div>
+
       <div className="login">
         <Link to="Signin">
           <div className="sign-in-btn">SIGN IN</div>
@@ -17,6 +17,11 @@ const Header = () => {
         <Link to="register">
           <div className="sign-up-link">Or Register *</div>
         </Link>
+      </div>
+      <div>
+        <p>
+          <strong>Guest</strong>
+        </p>
       </div>
     </header>
   );

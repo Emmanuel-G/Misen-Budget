@@ -12,10 +12,11 @@ body {
 }
 
 header {
+  grid-area: header;
   width: 100%;
-  height: 4.5rem;
+  height: 5rem;
   display: grid;
-  grid-template-columns: 3fr 4fr 2fr 1fr;
+  grid-template-columns: 3fr 4fr 1fr 2fr;
   align-content: center;
   /* background-color: #004953; */
 }
@@ -26,18 +27,21 @@ a {
 }
 
 footer {
+  grid-area: footer;
   display: grid;
   grid-template-rows: 4fr 1fr;
   width: 100%;
   height: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
-.register-form {
+.register-form,
+.signin-form {
   padding: 1.5rem 1rem;
 }
 
-.register-form div {
+.register-form div,
+.signin-form div {
   display: grid;
   grid-template-columns: 1fr 2fr;
   text-align: left;
@@ -46,7 +50,8 @@ footer {
   line-height: 1.2;
 }
 
-.register-form input {
+.register-form input,
+.signin-form input {
   height: 2rem;
 }
 
@@ -56,10 +61,6 @@ footer {
   padding-top: 0.25rem;
 }
 
-.app-brand {
-  margin-left: 0.5rem;
-}
-
 .app-brand h2 {
   color: #004953;
   font-size: 2rem;
@@ -67,10 +68,15 @@ footer {
 
 .container {
   display: grid;
-  grid-template-rows: 1fr 10fr 3fr;
+  grid-template-rows: 2fr 6fr 6fr 3fr;
+  grid-template-areas:
+    "header"
+    "hero"
+    "extra"
+    "footer";
   justify-items: flex-start;
-  width: 1280px;
-  height: 100vh;
+  max-width: 1280px;
+  min-height: 90vh;
   margin: auto;
   /* overflow: hidden; */
 }
@@ -86,12 +92,12 @@ footer {
   width: 5.5rem;
   height: 2.25rem;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 0.75rem;
-  padding: 0.5rem;
+  padding: 0.35rem;
 }
 
 .sign-up-link {
@@ -104,39 +110,51 @@ footer {
 }
 
 .home-page {
+  grid-area: hero;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas: "left center right";
   width: 100%;
   height: 100%;
   text-align: center;
-  margin: 0.25rem;
+  margin-top: 4rem;
 }
 
 .home-left {
   grid-area: left;
   width: 100%;
   height: 100%;
-  padding-top: 15rem;
-  background-image: url("./backgl.png");
+  padding-top: 14rem;
+  /* background-image: url("./backgl.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top; */
 }
 
 .home-left img {
   margin-right: 5rem;
+  border-radius: 50%;
 }
 
 .home-center {
   grid-area: center;
   width: 100%;
   height: 100%;
-  padding-top: 15rem;
+  padding-top: 2rem;
   background-image: url("./backg1.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+}
+
+.home-center p {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.home-center span {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .home-right {
@@ -144,14 +162,15 @@ footer {
   width: 100%;
   height: 100%;
   padding-top: 14rem;
-  background-image: url("./backgr.png");
+  /* background-image: url("./backgr.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top; */
 }
 
 .home-right img {
   margin-left: 5rem;
+  border-radius: 50%;
 }
 
 .footer-top {
@@ -166,7 +185,7 @@ footer {
   text-align: center;
   width: 100%;
   background-color: #dcfbff;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .footer-bottom {
@@ -211,40 +230,46 @@ footer {
   padding-top: 0.5rem;
 }
 
-.register-page {
+.register-page,
+.signin-page {
+  grid-area: hero;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "left right";
   width: 100%;
   height: 100%;
   text-align: center;
-  margin: 0.25rem;
+  margin: 0.25rem 0;
 }
 
-.register-left {
+.register-left,
+.signin-left {
   grid-area: left;
   width: 70%;
   height: 80%;
-  margin: 4rem 3rem;
+  margin: 4rem 0;
   border: 8px solid #004953;
 }
 
-.register-right {
+.register-right,
+.signin-right {
   grid-area: right;
   width: 100%;
   height: 100%;
-  padding-top: 5rem;
+  padding-top: 8rem;
   background-image: url("./backg1.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.register-right h2 {
+.register-right h2,
+.signin-right h2 {
   font-size: 2.5rem;
 }
 
-.register-right p {
+.register-right p,
+.signin-right p {
   font-size: 2rem;
   line-height: 1.2;
 }
@@ -268,4 +293,98 @@ footer {
   background-color: red;
   margin: 0.25rem 1rem;
   padding: 0.25rem;
+}
+
+/************************** Budget Page ****************************************/
+
+.budget-page {
+  grid-area: hero;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8% 90%;
+  grid-template-areas:
+    "bud-header"
+    "bud-body";
+  width: 100%;
+}
+
+.budget-page-header {
+  grid-area: bud-header;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  justify-items: center;
+  font-weight: 600;
+  background-color: #dcfbff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.budget-page-header div {
+  text-align: center;
+}
+
+.budget-page-body {
+  grid-area: bud-body;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 85% 13%;
+  grid-template-areas: "bud-area bud-nav";
+  column-gap: 1rem;
+}
+
+.budget-area {
+  grid-area: bud-area;
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  grid-template-rows: 5% 8% 86%;
+  grid-template-areas:
+    "period period period period"
+    "detail open-b trans-b curr-b"
+    "deta-d open-d trans-d curr-d";
+}
+
+.budget-period {
+  grid-area: period;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.budget-details {
+  grid-area: detail;
+  margin-left: 0.5rem;
+  background-color: #dcfbff;
+  font-weight: 600;
+}
+
+.budget-open {
+  grid-area: open-b;
+  text-align: right;
+  background-color: #dcfbff;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.budget-trans {
+  grid-area: trans-b;
+  text-align: right;
+  background-color: #dcfbff;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.budget-balance {
+  grid-area: curr-b;
+  text-align: right;
+  background-color: #dcfbff;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.budget-nav {
+  grid-area: bud-nav;
+  background-color: #004953;
 }
