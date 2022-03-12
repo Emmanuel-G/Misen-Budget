@@ -317,34 +317,66 @@ footer {
   width: 100%;
   justify-items: center;
   font-weight: 600;
-  background-color: #dcfbff;
-  border-radius: 1rem;
+  background-color: #004953;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .budget-page-header div {
   text-align: center;
+  color: #ffffff;
 }
 
 .budget-page-body {
   grid-area: bud-body;
   width: 100%;
   display: grid;
-  grid-template-columns: 85% 13%;
+  grid-template-columns: 80% 18.6%;
   grid-template-areas: "bud-area bud-nav";
   column-gap: 1rem;
 }
 
-.budget-area {
+.budget-table {
   grid-area: bud-area;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 6fr 1fr 1fr 1fr;
   grid-template-rows: 5% 8% 86%;
   grid-template-areas:
     "period period period period"
     "detail open-b trans-b curr-b"
-    "deta-d open-d trans-d curr-d";
+    "deta-d open-d trans-d curr-d"; */
+}
+
+.budget-table-heading {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  grid-template-areas: "detail open-b trans-b curr-b";
+  background-color: #dcfbff;
+  font-size: 0.8rem;
+}
+
+.budget-table-data {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  grid-template-areas: "deta-d open-d trans-d curr-d";
+}
+
+.budget-table-group {
+  margin-bottom: 2rem;
+}
+
+.budget-group-title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+
+.budget-group-title div {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #004953;
+  text-align: center;
+  margin-right: 0.5rem;
 }
 
 .budget-period {
@@ -356,14 +388,12 @@ footer {
 .budget-details {
   grid-area: detail;
   margin-left: 0.5rem;
-  background-color: #dcfbff;
   font-weight: 600;
 }
 
 .budget-open {
   grid-area: open-b;
   text-align: right;
-  background-color: #dcfbff;
   font-weight: 600;
   padding: 0.5rem;
 }
@@ -371,7 +401,6 @@ footer {
 .budget-trans {
   grid-area: trans-b;
   text-align: right;
-  background-color: #dcfbff;
   font-weight: 600;
   padding: 0.5rem;
 }
@@ -379,7 +408,6 @@ footer {
 .budget-balance {
   grid-area: curr-b;
   text-align: right;
-  background-color: #dcfbff;
   font-weight: 600;
   padding: 0.5rem;
 }
@@ -387,4 +415,15 @@ footer {
 .budget-nav {
   grid-area: bud-nav;
   background-color: #004953;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}
+
+.budget-nav button {
+  width: 12rem;
+  height: 2.5rem;
+  margin: 0.75rem auto;
+  font-weight: 600;
+  color: red;
 }

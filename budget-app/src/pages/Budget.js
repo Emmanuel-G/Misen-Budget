@@ -20,27 +20,59 @@ const Budget = () => {
         </div>
       </div>
       <div className="budget-page-body">
-        <div className="budget-area">
+        <div className="budget-table">
           <div className="budget-period">
             <h3>Period: From 01/01/2022 To: 31/01/2022</h3>
           </div>
-          <div className="budget-details"></div>
-          <div className="budget-open">
-            <h4>Opening</h4>
-            <h4>Budget</h4>
+          <div className="budget-table-heading">
+            <div className="budget-open">
+              <h4>OPENING</h4>
+              <h4>BUDGET</h4>
+            </div>
+            <div className="budget-trans">
+              <h4>USED</h4>
+              <h4>BUDGET</h4>
+            </div>
+            <div className="budget-balance">
+              <h4>AVAILABLE</h4>
+              <h4>BUDGET</h4>
+            </div>
           </div>
-          <div className="budget-trans">
-            <h4>Transactions</h4>
+
+          <div className="budget-table-group">
+            <div className="budget-group-title">
+              <div>+</div>
+              <h4>INCOME:</h4>
+            </div>
+            <div className="budget-table-data"></div>
           </div>
-          <div className="budget-balance">
-            <h4>Available</h4>
-            <h4>Budget</h4>
+
+          <div className="budget-table-group">
+            <div className="budget-group-title">
+              <div>+</div>
+              <h4>EXPENSES:</h4>
+            </div>
+            <div className="budget-table-data"></div>
           </div>
-          <div className="budget-group"></div>
-          <div className="budget-details"></div>
-          <div className="budget-total"></div>
+
+          <div className="budget-table-group">
+            <div className="budget-group-title">
+              <div>+</div>
+              <h4>SAVINGS:</h4>
+            </div>
+            <div className="budget-table-data"></div>
+          </div>
+
+          <div className="budget-grand-total">
+            <div>
+              <h4>GRAND TOTAL:</h4>
+            </div>
+          </div>
         </div>
-        <div className="budget-nav"></div>
+        <div className="budget-nav">
+          <button>Add Budget Item</button>
+          <button>Record Transaction</button>
+        </div>
       </div>
     </div>
   );
